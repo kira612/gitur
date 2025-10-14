@@ -9,12 +9,12 @@ class UserCreate(BaseModel):
     password: str = Field(min_length=8)
 
 
-@app.get("/heatlth", tags=["Health"])
+@app.get("/health", tags=["Health"])
 def health_check():
     return {"status": "ok"}
 
 
 @app.post("/auth/register")
-def register(playload: UserCreate):
+def register(payload: UserCreate):
     # Registration logic will be implemented here
     return {"todo": "implement", "email": payload.email}
